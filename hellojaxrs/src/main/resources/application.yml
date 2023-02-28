@@ -1,0 +1,32 @@
+micronaut:
+  application:
+    name: hellojaxrs
+  router:
+    static-resources:
+      swagger:
+        paths: classpath:META-INF/swagger
+        mapping: /swagger/**
+      swagger-ui:
+        paths: classpath:META-INF/swagger/views/swagger-ui
+        mapping: /swagger-ui/**    
+swagger-ui:
+  enabled: true
+  theme: MATERIAL
+
+netty:
+  default:
+    allocator:
+      max-order: 3
+
+openapi: 3.0.1
+info:
+  title: the title
+  description: My API
+  contact:
+    name: Fred
+    url: https://gigantic-server.com
+    email: Fred@gigagantic-server.com
+  license:
+    name: Apache 2.0
+    url: https://foo.bar
+  version: "0.0"
